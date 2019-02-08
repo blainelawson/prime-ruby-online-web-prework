@@ -8,12 +8,8 @@ def prime?(number)
   array1 = range1.to_a
   array1.each do |i|
     # I want to now divide this i by all numbers in the range UP TO i
-    range1 = (1..i)
-    array2 = range1.to_a
-    array2.each do |inner_i|
-      if inner_i % i == 0
-        div_count += 1
-      end
+    if number % i == 0
+      div_count += 1
     end
   end
   if div_count > 2
